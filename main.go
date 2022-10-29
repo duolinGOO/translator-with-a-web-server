@@ -58,7 +58,7 @@ func handleconnec(conn net.Conn) {
 		takestr := string(buf[0:n])
 		answ, ok := dict[takestr]
 		if ok == false {
-			fmt.Println("not found")
+			answ = "not found"
 		}
 		conn.Write([]byte(answ))
 	}
